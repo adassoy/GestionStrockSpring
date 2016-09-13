@@ -13,6 +13,8 @@
 
 <h2><a href="inventario">Ver inventario</a></h2>
 
+<h3><a href="personas">Ver Personas</a></h3>
+
 <ul>
 <li>IP:${requestIP}</li>
 <li>UserAgent:${requestUA}</li>

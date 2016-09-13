@@ -2,37 +2,60 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	
+
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	
+
 	<bean id="productManager" class="com.ipartek.formacion.service.SimpleProductManager">
-         <property name="products">
-            <list>
-                <ref bean="product1"/>
-                <ref bean="product2"/>
-                <ref bean="product3"/>
-            </list>
-         </property>
-       </bean>
+		<property name="products">
+			<list>
+				<ref bean="product1" />
+				<ref bean="product2" />
+				<ref bean="product3" />
+			</list>
+		</property>
+	</bean>
 
-       <bean id="product1" class="com.ipartek.formacion.domain.Product">
-         <property name="description" value="Lamp"/>
-         <property name="price" value="5.75"/>
-       </bean>
-        
-       <bean id="product2" class="com.ipartek.formacion.domain.Product">
-         <property name="description" value="Table"/>
-         <property name="price" value="75.25"/>
-       </bean>
+	<bean id="product1" class="com.ipartek.formacion.domain.Product">
+		<property name="description" value="Lamp" />
+		<property name="price" value="5.75" />
+	</bean>
 
-       <bean id="product3" class="com.ipartek.formacion.domain.Product">
-         <property name="description" value="Chair"/>
-         <property name="price" value="22.79"/>
-       </bean>
+	<bean id="product2" class="com.ipartek.formacion.domain.Product">
+		<property name="description" value="Table" />
+		<property name="price" value="75.25" />
+	</bean>
 
-       <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-         <property name="basename" value="messages"/>
-       </bean>
+	<bean id="product3" class="com.ipartek.formacion.domain.Product">
+		<property name="description" value="Chair" />
+		<property name="price" value="22.79" />
+	</bean>
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="messages" />
+	</bean>
 	
-		
+	<!-- lista de 'personas' -->
+	
+	<bean id="personaManager" class="com.ipartek.formacion.service.SimplePersonaManager">
+		<property name="personas">
+			<list>
+				<ref bean="persona1" />
+				<ref bean="persona2" />
+				<ref bean="persona3" />				
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="persona1" class="com.ipartek.formacion.domain.Persona">
+		<property name="nombre" value="Manolito" />		
+	</bean>
+	<bean id="persona2" class="com.ipartek.formacion.domain.Persona">
+		<property name="nombre" value="Manolote" />		
+	</bean>
+	<bean id="persona3" class="com.ipartek.formacion.domain.Persona">
+		<property name="nombre" value="Manoli" />		
+	</bean>
+
+
 </beans>
