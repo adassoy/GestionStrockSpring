@@ -59,6 +59,8 @@
 		<property name="nombre" value="Manoli" />
 		<property name="edad" value="54" />		
 	</bean>
+	
+	
 
 
 </beans>
