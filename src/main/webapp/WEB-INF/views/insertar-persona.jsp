@@ -3,7 +3,7 @@
 
 <html>
 <head>
-<title><fmt:message key="insertPersona.title" /></title>
+<title>titulo</title>
 <style>
 .error {
 	color: red;
@@ -12,9 +12,9 @@
 </head>
 <body>
 	<h1>
-		<fmt:message key="insertPersona.heading" />
+		Insertar persona
 	</h1>
-	<form:form method="post" commandName="isertarPersona">
+	<form:form method="post" commandName="persona">
 		<table>
 			<tr>
 				<td>
@@ -23,24 +23,27 @@
 				<td>
 					<form:input path="nombre" />
 				</td>
+				<td >
+					<form:errors path="nombre" cssClass="error" />
+				</td>
+			</tr>
+			<tr>
 				<td>
-					<fmt:message key="edad" />
+					<fmt:message key="edad"/>
+				</td>				
+				<td >
+					<form:input path="edad"/>
 				</td>
 				<td >
-					<form:input path="edad" />
-				</td>
-				<td >
-					<form:errors path="" cssClass="error" />
+					<form:errors path="edad" cssClass="error" />
 				</td>
 				
-				
-				<td width="60%"><form:errors path="porcentaje" cssClass="error" />
-				</td>
+							
 			</tr>
 		</table>
 		<br>
 		<input type="submit" value="Ejecutar">
 	</form:form>
-	<a href="<c:url value="hello.htm"/>">Home</a>
+	
 </body>
 </html>

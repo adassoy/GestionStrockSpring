@@ -48,13 +48,16 @@
 	</bean>
 	
 	<bean id="persona1" class="com.ipartek.formacion.domain.Persona">
-		<property name="nombre" value="Manolito" />		
+		<property name="nombre" value="Manolito" />	
+		<property name="edad" value="24" />	
 	</bean>
 	<bean id="persona2" class="com.ipartek.formacion.domain.Persona">
-		<property name="nombre" value="Manolote" />		
+		<property name="nombre" value="Manolote" />	
+		<property name="edad" value="20" />	
 	</bean>
 	<bean id="persona3" class="com.ipartek.formacion.domain.Persona">
-		<property name="nombre" value="Manoli" />		
+		<property name="nombre" value="Manoli" />
+		<property name="edad" value="54" />		
 	</bean>
 
 

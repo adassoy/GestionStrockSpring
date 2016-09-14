@@ -18,7 +18,7 @@ public class SimplePersonaManager implements PersonaManager {
 	}
 	
 	public void setPersonas(List<Persona> personas) {
-		// throw new UnsupportedOperationException();
+		
 		this.personas = personas;
 
 	}

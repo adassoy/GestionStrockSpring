@@ -14,8 +14,8 @@ public class PriceIncrease {
 
 	@Min(0)
 	@Max(50)
-
 	private int porcentaje;
+	
 	@AssertTrue
 	private boolean confirmar;
 

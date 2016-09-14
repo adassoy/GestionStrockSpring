@@ -15,7 +15,7 @@
 
 <h3><a href="personas">Ver Personas</a></h3>
 
-<h3><a href="insert-persona.html">Insertar Persona</a></h3>
+<h3><a href="<c:url value="insertar-persona.html"/>">Insertar Persona</a></h3>
 
 <!-- Aqui redirigimos a un controlador 'incremento-precio.html': -->
 <h3><a href="<c:url value="incremento-precio.html"/>">INCREMENTO DE PRECIO</a></h3>

@@ -7,7 +7,8 @@
     <p><fmt:message key="greeting"/> <c:out value="${fecha}"/></p>
     <h3>PERSONAS</h3>
     <c:forEach items="${personas}" var="per">
-      <c:out value="${per.nombre}"/> <br><br>      
+      <c:out value="${per.nombre}"/> <br><br>
+      <c:out value="${per.edad}"/> <br><br>      
     </c:forEach>
     
   </body>
