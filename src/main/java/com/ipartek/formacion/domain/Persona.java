@@ -14,11 +14,12 @@ public class Persona implements Serializable {
 	/** Logger for this class and subclasses */
 	protected final Log logger = LogFactory.getLog(getClass());
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = -1801296579117638697L;
-	@NotNull 
-    @Size(min=3, max=255)
+	@NotNull
+	// @Pattern(regexp = "[a-z]")
+	@Size(min = 3, max = 255)
 	private String nombre;
 	@Min(0)
 	@Max(199)

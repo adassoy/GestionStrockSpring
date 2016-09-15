@@ -5,7 +5,8 @@
 	<title>Home</title>
 </head>
 <body>
-<a href="user?lang=es">Español </a> | <a href="user?lang=en">Ingles </a>
+<a href="?language=en">Inglés</a><br />
+ <a href="?language=es">Español</a> 
 <h1>
 	Hello world!  
 </h1>
