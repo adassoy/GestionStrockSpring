@@ -15,6 +15,9 @@
 		Insertar persona
 	</h1>
 	<form:form method="post" commandName="persona">
+	<!-- El 'commandName' se corresponde con el 'BindingResult' del metodo 'POST'
+	que se encuentra en el controlador y lo que hace es recoger los datos
+	 del nuevo objeto creado en el 'GET'-->
 		<table>
 			<tr>
 				<td>

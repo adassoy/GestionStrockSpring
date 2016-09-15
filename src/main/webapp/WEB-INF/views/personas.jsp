@@ -5,7 +5,7 @@
   <body>
     <h1><fmt:message key="heading_personas"/></h1>
     <p><fmt:message key="greeting"/> <c:out value="${fecha}"/></p>
-    <h3>PERSONAS</h3>
+    <h3><fmt:message key="personas.h1"/></h3>
     <c:forEach items="${personas}" var="per">
       <c:out value="${per.nombre}"/> <br><br>
       <c:out value="${per.edad}"/> <br><br>      

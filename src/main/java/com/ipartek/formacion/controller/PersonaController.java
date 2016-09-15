@@ -3,7 +3,6 @@ package com.ipartek.formacion.controller;
 import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -22,7 +21,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.ipartek.formacion.domain.Persona;
 import com.ipartek.formacion.service.PersonaManager;
-import com.ipartek.formacion.service.SimplePersonaManager;
 
 @Controller
 
@@ -37,8 +35,6 @@ public class PersonaController {
 	public void setPersonaManager(PersonaManager personaManager) {
 		this.personaManager = personaManager;
 	}
-	
-	
 
 	@RequestMapping(value = "/personas")
 
@@ -58,43 +54,49 @@ public class PersonaController {
 		// cuales son los atributos que tiene que enviarle 'model'
 	}
 
-	@RequestMapping(value = "/insertar-persona.html")
-	public ModelAndView handleRequest2(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	// @RequestMapping(value = "/insertar-persona.html")
+	// public ModelAndView handleRequest2(HttpServletRequest request,
+	// HttpServletResponse response)
+	// throws ServletException, IOException {
 
-		this.logger.info("Procesando peticion para 'Insertar persona'");
+	// this.logger.info("Procesando peticion para 'Insertar persona'");
 
-		// atributos == modelo
-		Map<String, Object> model = new HashMap<String, Object>();
+	//// atributos == modelo
+	// Map<String, Object> model = new HashMap<String, Object>();
 
-		return new ModelAndView("insertar-persona", model);
-		// de esta forma le indicamos cual es la pagina
-		// que tiene que ejecutar "inventario" y
-		// cuales son los atributos que tiene que enviarle 'model'
-	}
+	// return new ModelAndView("insertar-persona", model);
+	// de esta forma le indicamos cual es la pagina
+	// que tiene que ejecutar "inventario" y
+	// cuales son los atributos que tiene que enviarle 'model'
+	// }
 
 	@RequestMapping(value = "/insertar-persona.html", method = RequestMethod.POST)
 	public String onSubmit(@Valid Persona persona, BindingResult result) {
 		if (result.hasErrors()) {
 			// si la validacion no es correcta nos devuelve a esta pagina
-			// 'priceincrease'
+
 			return "insertar-persona";
 		}
-		
-		Map<String, Object> model = new HashMap<String, Object>();
-		
-		
+
+		new HashMap<String, Object>();
 
 		persona.getNombre();
 		persona.getEdad();
 
-		// this.logger.info("Increasing prices by " + increase + "%.");
+		this.logger.trace("Insertanda persona " + persona.toString());
 
 		return "redirect:/personas";
 	}
 
+	/**
+	 *
+	 * @param request
+	 * @return 'insertar-persona.jsp' con datos cargados en los campos 'input'
+	 * @throws ServletException
+	 */
 	@RequestMapping(value = "/insertar-persona.html", method = RequestMethod.GET)
 	protected Persona formBackingObject(HttpServletRequest request) throws ServletException {
+		this.logger.trace("Antes de cargar 'insertar-persona.jsp'");
 		Persona persona = new Persona();
 		persona.setEdad(0);
 
